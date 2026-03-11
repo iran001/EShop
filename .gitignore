@@ -72,7 +72,7 @@ coverage.xml
 local_settings.py
 
 # Data files
-data/data/
+data/data/*.json
 
 # Chat memories
 chat/memories/*
