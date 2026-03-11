@@ -1,0 +1,367 @@
+{"OPER":"SP_LIST","SEARCH_STR":"","DH_ID":"","DJ_TYPE":"全部","MALL_ID":"00010001","GYS_ID":"","STATE":"全部","USER_ID":"全部","USER_TYPE_YN":"Y","START_TIME":"2026-03-06 00:00:00","OVER_TIME":"2026-03-06 23:59:59","PAGE_SIZE":"50","NOW_PAGE":1,"MH_YN":"Y"}
+
+
+{"OPER":"BILL_LIST","DJ_TYPE":"全部","OPER_TYPE":"","USER_ID":"全部","MALL_ID":"00010001","STATE":"全部","USER_TYPE_YN":"Y","START_TIME":"2026-03-06 00:00:00","OVER_TIME":"2026-03-06 23:59:59","PAGE_SIZE":"50","NOW_PAGE":1,"MH_YN":"Y"}
+
+-------prompt--------------------------------
+
+Role:你是一个资深的python后端开发；
+Task:用python实现一个任务，从指定的api1拉取数据，并保存到本地数据库database1；
+
+开发说明：
+1.api1地址：https://www.91byk.com/smSellCaf/api/smSellApi/；
+   methon：post；
+   body:{
+    "API_NAME": "smSellQueryApi",
+    "METHOD_NAME": "GET_LS_DETAIL",
+    "REQ_JSON_STR": "eyJPUEVSIjoiQklMTF9MSVNUIiwiREpfVFlQRSI6IuWFqOmDqCIsIk9QRVJfVFlQRSI6IiIsIlVTRVJfSUQiOiLlhajpg6giLCJNQUxMX0lEIjoiMDAwMTAwMDEiLCJTVEFURSI6IuWFqOmDqCIsIlVTRVJfVFlQRV9ZTiI6IlkiLCJTVEFSVF9USU1FIjoiMjAyNi0wMy0wNiAwMDowMDowMCIsIk9WRVJfVElNRSI6IjIwMjYtMDMtMDYgMjM6NTk6NTkiLCJQQUdFX1NJWkUiOiI1MCIsIk5PV19QQUdFIjoxLCJNSF9ZTiI6IlkifQ==",
+    "API_USER_PHONE": "18260284170",
+    "API_USER_ID": "1001",
+    "API_REQ_FROM": "WEB",
+    "API_REQ_VER": "smSellAdmin"
+};
+    body中参数"REQ_JSON_STR"是如下json值编码后内容：
+	{"OPER":"BILL_LIST","DJ_TYPE":"全部","OPER_TYPE":"","USER_ID":"全部","MALL_ID":"00010001","STATE":"全部","USER_TYPE_YN":"Y","START_TIME":"2026-03-06 00:00:00","OVER_TIME":"2026-03-06 23:59:59","PAGE_SIZE":"50","NOW_PAGE":1,"MH_YN":"Y"}；
+
+2.拉起时间范围从2023/01/01~2026/02/28，每次拉取50条，通过"REQ_JSON_STR"参数中"NOW_PAGE"控制不同页的拉取值；
+3.api1访问成功的格式如下，当result="success"时，将data值保存在数据库中：
+  {
+    "result": "sucess",
+    "msg": "获取零售单据列表数据成功",
+    "data": [
+        {
+            "TR": "2",
+            "TP": "1",
+            "dh_id": "3100010001260306000002",
+            "oper_type": "零售销售单",
+            "t_type": "零售开单",
+            "dw_dh_id": "3726030609235837040002",
+            "mall_id": "00010001",
+            "mall_name": "果果爱家",
+            "vip_id": "",
+            "vip_name": "",
+            "state": "已结账",
+            "yw_time": "2026-03-06 09:23:58",
+            "yw_user_id": "1001",
+            "yw_user_name": "管理员",
+            "inout_mark": "1",
+            "pro_old_total_money": "17.42",
+            "tax_money": "0",
+            "un_tax_pro_total_money": "17.42",
+            "kw_old_total_money": "0",
+            "yh_money": "0.02",
+            "yf_money": "17.4",
+            "in_money": "0",
+            "t_ml_money": "17.4",
+            "t_tc_money": "0",
+            "t_jf_value": "0",
+            "pay_way": "微信",
+            "pay_result": "",
+            "pay_msg": "",
+            "pay_state": "",
+            "kq_id": "",
+            "kq_dk_money": "0",
+            "user_memo": "尚米PAY",
+            "refund_dh_list": "",
+            "refund_money": "0",
+            "gl_dh_type": "",
+            "gl_dh_id": "",
+            "table_id": "",
+            "creat_user_id": "1001",
+            "creat_user_name": "管理员",
+            "creat_time": "2026-03-06 09:23:59",
+            "chg_user_id": "1001",
+            "chg_user_name": "管理员",
+            "chg_time": "2026-03-06 09:24:00",
+            "t_from": "WIN",
+            "cx_type": "",
+            "cx_dh_id": "",
+            "custom_id": "",
+            "RC": "1"
+        },
+        {
+            "TR": "2",
+            "TP": "1",
+            "dh_id": "3100010001260306000001",
+            "oper_type": "零售销售单",
+            "t_type": "零售开单",
+            "dw_dh_id": "3726030608510506560001",
+            "mall_id": "00010001",
+            "mall_name": "果果爱家",
+            "vip_id": "",
+            "vip_name": "",
+            "state": "已结账",
+            "yw_time": "2026-03-06 08:51:05",
+            "yw_user_id": "1001",
+            "yw_user_name": "管理员",
+            "inout_mark": "1",
+            "pro_old_total_money": "35",
+            "tax_money": "0",
+            "un_tax_pro_total_money": "35",
+            "kw_old_total_money": "0",
+            "yh_money": "0",
+            "yf_money": "35",
+            "in_money": "0",
+            "t_ml_money": "35",
+            "t_tc_money": "0",
+            "t_jf_value": "0",
+            "pay_way": "支付宝",
+            "pay_result": "",
+            "pay_msg": "",
+            "pay_state": "",
+            "kq_id": "",
+            "kq_dk_money": "0",
+            "user_memo": "尚米PAY",
+            "refund_dh_list": "",
+            "refund_money": "0",
+            "gl_dh_type": "",
+            "gl_dh_id": "",
+            "table_id": "",
+            "creat_user_id": "1001",
+            "creat_user_name": "管理员",
+            "creat_time": "2026-03-06 08:51:06",
+            "chg_user_id": "1001",
+            "chg_user_name": "管理员",
+            "chg_time": "2026-03-06 08:51:07",
+            "t_from": "WIN",
+            "cx_type": "",
+            "cx_dh_id": "",
+            "custom_id": "",
+            "RC": "2"
+        }
+    ],
+    "total": [
+        {
+            "TR": "2",
+            "t_money": "52.42",
+            "t_yh_money": "0.02",
+            "t_yf_money": "52.4",
+            "tax_money": "0",
+            "un_tax_pro_total_money": "52.42",
+            "t_ml_money": "52.4",
+            "t_tc_money": "0"
+        }
+    ]
+}
+
+4.database1为postgresql数据库，数据库连接放配置文件，为数据库实体生成脚本；
+
+现在开始生成代码。
+
+--------------------------------------------
+
+代码作如下调整：
+1.此api拉取的是“销售记录”，将相关配置等命名作调整；
+2.增加新的api2拉取服务，拉取“销售记录明细”，要求两个api配置、代码都独立，api2的url及参数参考api1，不同处有如下：
+2.1 body中参数"REQ_JSON_STR"是如下json值编码后内容：
+	{"OPER":"SP_LIST","SEARCH_STR":"","DH_ID":"","DJ_TYPE":"全部","MALL_ID":"00010001","GYS_ID":"","STATE":"全部","USER_ID":"全部","USER_TYPE_YN":"Y","START_TIME":"2026-03-06 00:00:00","OVER_TIME":"2026-03-06 23:59:59","PAGE_SIZE":"50","NOW_PAGE":1,"MH_YN":"Y"}；
+2.2 response如下：
+{
+    "result": "sucess",
+    "msg": "获取零售商品明细列表数据成功",
+    "data": [
+        {
+            "TR": "2",
+            "TP": "1",
+            "id": "159918",
+            "pro_id": "00000051",
+            "pro_name": "进口香蕉",
+            "pym": "JKXJ",
+            "zbm": "",
+            "pro_unit": "公斤",
+            "pro_size": "",
+            "color_id": "001",
+            "color_name": "默认",
+            "size_id": "001",
+            "size_name": "默认",
+            "pro_num": "1.502",
+            "zs_num": "0",
+            "pro_price": "11.6",
+            "pro_old_price": "11.6",
+            "kw_price": "0",
+            "kw_price_list": "",
+            "pro_zked_price": "11.5867",
+            "tax_rate": "0",
+            "tax_fee": "0",
+            "un_tax_pro_price": "11.6",
+            "un_tax_pro_total_price": "17.42",
+            "pro_total_price": "17.42",
+            "pro_old_total_price": "17.42",
+            "kw_old_total_price": "0",
+            "pro_zked_total_price": "17.4",
+            "pro_yh_price": "0",
+            "pro_yh_total_price": "0",
+            "in_price": "0",
+            "in_total_price": "0",
+            "mlr_money": "17.4",
+            "sale_mll": "100",
+            "yh_memo": "",
+            "tc_way": "按金额",
+            "tc_value": "0",
+            "tc_money": "0",
+            "jf_way": "",
+            "pro_jf": "0",
+            "dh_id": "3100010001260306000002",
+            "yw_time": "2026-03-06 09:23:58",
+            "t_type": "零售开单",
+            "dj_state": "已结账",
+            "vip_id": "",
+            "vip_name": "",
+            "check_user_id": "1001",
+            "check_user_name": "管理员",
+            "yw_user_name": "管理员",
+            "creat_user_name": "管理员",
+            "creat_time": "2026-03-06 09:23:59",
+            "chg_user_name": "管理员",
+            "chg_time": "2026-03-06 09:23:59",
+            "t_from": "WIN",
+            "mall_name": "果果爱家",
+            "cls_name": "水果",
+            "gys_name": "自购",
+            "pro_memo": "",
+            "RC": "1"
+        },
+        {
+            "TR": "2",
+            "TP": "1",
+            "id": "159917",
+            "pro_id": "00000576",
+            "pro_name": "阳澄湖草鸡蛋",
+            "pym": "YCHCJD",
+            "zbm": "",
+            "pro_unit": "箱",
+            "pro_size": "",
+            "color_id": "001",
+            "color_name": "默认",
+            "size_id": "001",
+            "size_name": "默认",
+            "pro_num": "1",
+            "zs_num": "0",
+            "pro_price": "35",
+            "pro_old_price": "35",
+            "kw_price": "0",
+            "kw_price_list": "",
+            "pro_zked_price": "35",
+            "tax_rate": "0",
+            "tax_fee": "0",
+            "un_tax_pro_price": "35",
+            "un_tax_pro_total_price": "35",
+            "pro_total_price": "35",
+            "pro_old_total_price": "35",
+            "kw_old_total_price": "0",
+            "pro_zked_total_price": "35",
+            "pro_yh_price": "0",
+            "pro_yh_total_price": "0",
+            "in_price": "0",
+            "in_total_price": "0",
+            "mlr_money": "35",
+            "sale_mll": "100",
+            "yh_memo": "",
+            "tc_way": "按金额",
+            "tc_value": "0",
+            "tc_money": "0",
+            "jf_way": "",
+            "pro_jf": "0",
+            "dh_id": "3100010001260306000001",
+            "yw_time": "2026-03-06 08:51:05",
+            "t_type": "零售开单",
+            "dj_state": "已结账",
+            "vip_id": "",
+            "vip_name": "",
+            "check_user_id": "1001",
+            "check_user_name": "管理员",
+            "yw_user_name": "管理员",
+            "creat_user_name": "管理员",
+            "creat_time": "2026-03-06 08:51:06",
+            "chg_user_name": "管理员",
+            "chg_time": "2026-03-06 08:51:06",
+            "t_from": "WIN",
+            "mall_name": "果果爱家",
+            "cls_name": "农副产品",
+            "gys_name": "自购",
+            "pro_memo": "",
+            "RC": "2"
+        }
+    ],
+    "total": [
+        {
+            "TR": "2",
+            "pro_num": "2.502",
+            "zs_num": "0",
+            "pro_old_total_price": "52.42",
+            "pro_zked_total_price": "52.4",
+            "mlr_money": "52.4"
+        }
+    ],
+    "sql_out_excel": ""
+}
+现在开始生成代码。
+
+-------------------------------------------
+增加日志表，记录api拉取日志，颗粒度到不同api、同步日期（天），同时记录拉取是否成功状态、数据量；
+修改拉取api的逻辑，已有成功日志的，该api该天的数据不用拉取，确保各api指定时间范围内拉取的数据，不漏不重复；
+
+---------------------------------------------
+
+增加api和job，完成对会员信息的获取，会员获取接口如下：
+1.接口地址https://www.91byk.com/smSellCaf/api/smSellApi，POST方法；
+2.body入参如下：
+{
+    "API_NAME": "smSellQueryApi",
+    "METHOD_NAME": "GET_VIP_INFO",
+    "REQ_JSON_STR": "eyJPUEVSIjoiTUFMTF9WSVBfTElTVCIsIk1BTExfSUQiOiIwMDAxMDAwMSIsIkNMU19JRCI6IjAwIiwiU0VBUkNIX1NUUiI6IiIsIlBBR0VfU0laRSI6IjUwIiwiTk9XX1BBR0UiOiIxIiwiWkNfWU4iOiJZIiwiTUhfWU4iOiJZIn0=",
+    "API_USER_PHONE": "18260284170",
+    "API_USER_ID": "1001",
+    "API_REQ_FROM": "WEB",
+    "API_REQ_VER": "smSellAdmin",
+    "API_REQ_TOKEN": ""
+}，
+"REQ_JSON_STR"为base64编译后字符，原字符如下：
+{"OPER":"MALL_VIP_LIST","MALL_ID":"00010001","CLS_ID":"00","SEARCH_STR":"","PAGE_SIZE":"50","NOW_PAGE":"1","ZC_YN":"Y","MH_YN":"Y"}
+
+现在开始生成代码
+
+------------------------------------------------
+
+增加api和job，完成对商品档案的获取，获取接口如下：
+1.接口地址https://www.91byk.com/smSellCaf/api/smSellApi，POST方法；
+2.body入参如下：
+{
+    "API_NAME": "smSellQueryApi",
+    "METHOD_NAME": "GET_PRO_INFO",
+    "REQ_JSON_STR": "eyJPUEVSIjoiUFJPX0xJU1QiLCJNQUxMX0lEIjoiMDAwMTAwMDEiLCJDTFNfSUQiOiIwMCIsIkdZU19JRCI6IiIsIlVTRVJfSUQiOiIiLCJQUF9JRCI6IiIsIlNFQVJDSF9TVFIiOiIiLCJQQUdFX1NJWkUiOjUwLCJOT1dfUEFHRSI6MSwiWkNfWU4iOiLlhajpg6giLCJNSF9ZTiI6IlkiLCJQUk9fVFlQRSI6IiIsIlNUQVRFIjoi5q2j5bi4In0=",
+    "API_USER_PHONE": "18260284170",
+    "API_USER_ID": "1001",
+    "API_REQ_FROM": "WEB",
+    "API_REQ_VER": "smSellAdmin"
+}，
+"REQ_JSON_STR"为base64编译后字符，原字符如下：
+{"OPER":"PRO_LIST","MALL_ID":"00010001","CLS_ID":"00","GYS_ID":"","USER_ID":"","PP_ID":"","SEARCH_STR":"","PAGE_SIZE":50,"NOW_PAGE":1,"ZC_YN":"全部","MH_YN":"Y","PRO_TYPE":"","STATE":"正常"}
+3.该信息同步为每天全量同步，对数据的处理是先清除原有数据再插入新数据；
+
+现在开始生成代码
+
+
+------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

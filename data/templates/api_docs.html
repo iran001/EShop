@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据同步API文档</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .api-endpoint {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #555;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        .method {
+            display: inline-block;
+            padding: 3px 8px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        .method-get {
+            background-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>数据同步API文档</h1>
+        
+        <h2>同步API</h2>
+        
+        <div class="api-endpoint">
+            <h2><span class="method">POST</span>/api/sync/sale-records</h2>
+            <p>同步销售记录数据</p>
+            <h3>响应示例:</h3>
+            <pre>{{ sync_response_example }}</pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h2><span class="method">POST</span>/api/sync/sale-details</h2>
+            <p>同步销售记录明细数据</p>
+            <h3>响应示例:</h3>
+            <pre>{{ sync_response_example }}</pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h2><span class="method">POST</span>/api/sync/all</h2>
+            <p>同步所有数据</p>
+            <h3>响应示例:</h3>
+            <pre>{{ all_sync_response_example }}</pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h2><span class="method">POST</span>/api/sync/vip</h2>
+            <p>同步会员信息数据</p>
+            <h3>响应示例:</h3>
+            <pre>{{ vip_response_example }}</pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h2><span class="method">POST</span>/api/sync/pro-info</h2>
+            <p>同步商品档案数据</p>
+            <h3>响应示例:</h3>
+            <pre>{{ product_response_example }}</pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h2><span class="method">POST</span>/api/sync/weather</h2>
+            <p>同步历史天气数据（昆山）</p>
+            <h3>请求示例:</h3>
+            <pre>{{ weather_request_example }}</pre>
+            <h3>响应示例:</h3>
+            <pre>{{ weather_response_example }}</pre>
+        </div>
+        
+        <h2>任务管理API</h2>
+        
+        <div class="api-endpoint">
+            <h2><span class="method method-get">GET</span>/api/job/status</h2>
+            <p>获取任务状态和历史记录</p>
+            <h3>响应示例:</h3>
+            <pre>{{ job_status_example }}</pre>
+        </div>
+        
+        <div class="api-endpoint">
+            <h2><span class="method">POST</span>/api/job/run</h2>
+            <p>触发任务执行</p>
+            <h3>请求示例:</h3>
+            <pre>{{ job_run_request_example }}</pre>
+            <h3>响应示例:</h3>
+            <pre>{{ job_run_response_example }}</pre>
+        </div>
+    </div>
+</body>
+</html>

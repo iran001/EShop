@@ -1,0 +1,13 @@
+Role: 资深ai agent开发人员
+
+Task:创建一个基于LangChain的AI Agent
+
+限制：
+1.接入Qwen3-max LLM;
+2.使用ReAct的agent模型；
+3.使用Skill，用于查询数据库；数据库为postgresql；
+4.提供一个基于浏览器的对话框页面，用于输入问题和显示答案；需显示思考过程；
+5.需要有长期记忆，用本地文件来保存；不同的session记忆单独保存；
+6.预留对接知识库功能；
+
+现在开始生成代码

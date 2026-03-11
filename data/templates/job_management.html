@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务管理</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+        .job-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+        .job-item h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .job-info {
+            margin: 10px 0;
+        }
+        .label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+            color: #666;
+        }
+        .value {
+            display: inline-block;
+            color: #333;
+        }
+        .value.enabled {
+            color: #4CAF50;
+        }
+        .value.disabled {
+            color: #999;
+        }
+        .value.running {
+            color: #2196F3;
+        }
+        .value.idle {
+            color: #999;
+        }
+        .run-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .run-btn:hover {
+            background-color: #45a049;
+        }
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .history-table th, .history-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .history-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .history-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .status.success {
+            color: #4CAF50;
+        }
+        .status.failed {
+            color: #f44336;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>任务管理</h1>
+        
+        <h2>任务列表</h2>
+        {{ tasks_html }}
+        
+        <h2>执行历史</h2>
+        {{ history_html }}
+        
+        <div id="message" class="message"></div>
+    </div>
+    
+    <script>
+        function runJob(taskName) {
+            var messageDiv = document.getElementById('message');
+            messageDiv.textContent = '正在执行任务 ' + taskName + '...';
+            messageDiv.className = 'message';
+            messageDiv.style.display = 'block';
+            
+            fetch('/api/job/run', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({"task_name": taskName})
+            })
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                if (data.status === 'success') {
+                    messageDiv.textContent = data.message;
+                    messageDiv.className = 'message success';
+                } else {
+                    messageDiv.textContent = data.message;
+                    messageDiv.className = 'message error';
+                }
+                
+                // 3秒后隐藏消息
+                setTimeout(function() {
+                    messageDiv.style.display = 'none';
+                }, 3000);
+                
+                // 3秒后刷新页面
+                setTimeout(function() {
+                    location.reload();
+                }, 3500);
+            })
+            .catch(function(error) {
+                messageDiv.textContent = '执行任务失败: ' + error.message;
+                messageDiv.className = 'message error';
+                
+                // 3秒后隐藏消息
+                setTimeout(function() {
+                    messageDiv.style.display = 'none';
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>

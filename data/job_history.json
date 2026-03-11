@@ -1,0 +1,250 @@
+[
+  {
+    "job_id": "job_1772776758",
+    "start_time": "2026-03-06 13:59:18",
+    "end_time": "2026-03-06 13:59:21",
+    "duration": 2.35,
+    "status": "success",
+    "message": "同步任务执行成功"
+  },
+  {
+    "job_id": "job_sync_all_1773026197",
+    "task_name": "sync_all",
+    "task_display_name": "全量同步",
+    "start_time": "2026-03-09 11:16:37",
+    "end_time": "2026-03-09 11:16:38",
+    "duration": 0.28,
+    "status": "success",
+    "message": "全量同步成功"
+  },
+  {
+    "job_id": "job_sync_all_1773026422",
+    "task_name": "sync_all",
+    "task_display_name": "全量同步",
+    "start_time": "2026-03-09 11:20:22",
+    "end_time": "2026-03-09 11:20:22",
+    "duration": 0.13,
+    "status": "success",
+    "message": "全量同步成功"
+  },
+  {
+    "job_id": "job_sync_all_1773026424",
+    "task_name": "sync_all",
+    "task_display_name": "全量同步",
+    "start_time": "2026-03-09 11:20:24",
+    "end_time": "2026-03-09 11:20:24",
+    "duration": 0.26,
+    "status": "success",
+    "message": "全量同步成功"
+  },
+  {
+    "job_id": "job_sync_all_1773026450",
+    "task_name": "sync_all",
+    "task_display_name": "全量同步",
+    "start_time": "2026-03-09 11:20:50",
+    "end_time": "2026-03-09 11:20:50",
+    "duration": 0.12,
+    "status": "success",
+    "message": "全量同步成功"
+  },
+  {
+    "job_id": "job_sync_vip_1773039863",
+    "task_name": "sync_vip",
+    "task_display_name": "同步会员信息",
+    "start_time": "2026-03-09 15:04:23",
+    "end_time": "2026-03-09 15:04:32",
+    "duration": 9.68,
+    "status": "success",
+    "message": "会员信息同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773049462",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-09 17:44:22",
+    "end_time": "2026-03-09 17:44:35",
+    "duration": 12.46,
+    "status": "success",
+    "message": "全量同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773050035",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-09 17:53:55",
+    "end_time": "2026-03-09 17:54:06",
+    "duration": 11.07,
+    "status": "success",
+    "message": "全量同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773050092",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-09 17:54:52",
+    "end_time": "2026-03-09 17:55:02",
+    "duration": 10.14,
+    "status": "success",
+    "message": "全量同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773050562",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-09 18:02:42",
+    "end_time": "2026-03-09 18:02:49",
+    "duration": 6.44,
+    "status": "success",
+    "message": "商品信息同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773051493",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-09 18:18:13",
+    "end_time": "2026-03-09 18:18:19",
+    "duration": 6.23,
+    "status": "success",
+    "message": "商品信息同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773051580",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-09 18:19:40",
+    "end_time": "2026-03-09 18:19:45",
+    "duration": 5.51,
+    "status": "success",
+    "message": "商品信息同步成功"
+  },
+  {
+    "job_id": "job_sync_weather_1773054093",
+    "task_name": "sync_weather",
+    "task_display_name": "同步历史天气",
+    "start_time": "2026-03-09 19:01:33",
+    "end_time": "2026-03-09 19:01:35",
+    "duration": 2.12,
+    "status": "success",
+    "message": "历史天气数据同步成功"
+  },
+  {
+    "job_id": "job_sync_weather_1773054441",
+    "task_name": "sync_weather",
+    "task_display_name": "同步历史天气",
+    "start_time": "2026-03-09 19:07:21",
+    "end_time": "2026-03-09 19:07:22",
+    "duration": 1.85,
+    "status": "success",
+    "message": "历史天气数据同步成功"
+  },
+  {
+    "job_id": "job_sync_weather_1773054632",
+    "task_name": "sync_weather",
+    "task_display_name": "同步历史天气",
+    "start_time": "2026-03-09 19:10:32",
+    "end_time": "2026-03-09 19:10:34",
+    "duration": 1.9,
+    "status": "success",
+    "message": "历史天气数据同步成功"
+  },
+  {
+    "job_id": "job_sync_weather_1773055303",
+    "task_name": "sync_weather",
+    "task_display_name": "同步历史天气",
+    "start_time": "2026-03-09 19:21:43",
+    "end_time": "2026-03-09 19:23:38",
+    "duration": 114.9,
+    "status": "success",
+    "message": "历史天气数据同步成功"
+  },
+  {
+    "job_id": "job_sync_all_1773104947",
+    "task_name": "sync_all",
+    "task_display_name": "全量同步",
+    "start_time": "2026-03-10 09:09:07",
+    "end_time": "2026-03-10 09:09:09",
+    "duration": 1.61,
+    "status": "success",
+    "message": "全量同步成功"
+  },
+  {
+    "job_id": "job_sync_vip_1773104949",
+    "task_name": "sync_vip",
+    "task_display_name": "同步会员信息",
+    "start_time": "2026-03-10 09:09:09",
+    "end_time": "2026-03-10 09:09:10",
+    "duration": 0.76,
+    "status": "success",
+    "message": "会员信息同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773104950",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-10 09:09:10",
+    "end_time": "2026-03-10 09:09:10",
+    "duration": 0.15,
+    "status": "success",
+    "message": "商品信息同步成功"
+  },
+  {
+    "job_id": "job_sync_weather_1773104950",
+    "task_name": "sync_weather",
+    "task_display_name": "同步历史天气",
+    "start_time": "2026-03-10 09:09:10",
+    "end_time": "2026-03-10 09:09:10",
+    "duration": 0.51,
+    "status": "success",
+    "message": "历史天气数据同步成功"
+  },
+  {
+    "job_id": "job_sync_sale_records_1773104950",
+    "task_name": "sync_sale_records",
+    "task_display_name": "同步销售记录",
+    "start_time": "2026-03-10 09:09:10",
+    "end_time": "2026-03-10 09:09:11",
+    "duration": 0.37,
+    "status": "success",
+    "message": "销售记录同步成功"
+  },
+  {
+    "job_id": "job_sync_sale_details_1773104951",
+    "task_name": "sync_sale_details",
+    "task_display_name": "同步销售记录明细",
+    "start_time": "2026-03-10 09:09:11",
+    "end_time": "2026-03-10 09:09:11",
+    "duration": 0.42,
+    "status": "success",
+    "message": "销售记录明细同步成功"
+  },
+  {
+    "job_id": "job_sync_vip_1773105307",
+    "task_name": "sync_vip",
+    "task_display_name": "同步会员信息",
+    "start_time": "2026-03-10 09:15:07",
+    "end_time": "2026-03-10 09:15:15",
+    "duration": 8.2,
+    "status": "success",
+    "message": "会员信息同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773105329",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-10 09:15:29",
+    "end_time": "2026-03-10 09:15:33",
+    "duration": 4.6,
+    "status": "success",
+    "message": "商品信息同步成功"
+  },
+  {
+    "job_id": "job_sync_vip_1773201182",
+    "task_name": "sync_vip",
+    "task_display_name": "同步会员信息",
+    "start_time": "2026-03-11 11:53:02",
+    "end_time": "2026-03-11 11:53:12",
+    "duration": 9.96,
+    "status": "success",
+    "message": "会员信息同步成功"
+  }
+]
