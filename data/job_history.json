@@ -246,5 +246,25 @@
     "duration": 9.96,
     "status": "success",
     "message": "会员信息同步成功"
+  },
+  {
+    "job_id": "job_sync_vip_1773216655",
+    "task_name": "sync_vip",
+    "task_display_name": "同步会员信息",
+    "start_time": "2026-03-11 16:10:55",
+    "end_time": "2026-03-11 16:11:04",
+    "duration": 9.75,
+    "status": "success",
+    "message": "会员信息同步成功"
+  },
+  {
+    "job_id": "job_sync_pro_info_1773216737",
+    "task_name": "sync_pro_info",
+    "task_display_name": "同步商品档案",
+    "start_time": "2026-03-11 16:12:17",
+    "end_time": "2026-03-11 16:12:23",
+    "duration": 5.74,
+    "status": "success",
+    "message": "商品信息同步成功"
   }
 ]
