@@ -73,6 +73,7 @@ local_settings.py
 
 # Data files
 data/data/*.json
+data/job_history.json
 
 # Chat memories
 chat/memories/*
